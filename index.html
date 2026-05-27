@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Goal Tracker</title>
-  
+
   <!-- Modern Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
+
   <!-- Chart.js for Weekly Progress -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
+
   <!-- Canvas Confetti for Celebrations -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
@@ -104,7 +107,12 @@
       line-height: 1.5;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: 'Outfit', sans-serif;
       font-weight: 600;
     }
@@ -485,7 +493,8 @@
       line-height: 1.5;
     }
 
-    .filters-card h3, .overview-card h3 {
+    .filters-card h3,
+    .overview-card h3 {
       font-size: 1rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -557,11 +566,25 @@
       border-radius: 50%;
     }
 
-    .dot-on-track { background-color: var(--status-on-track); }
-    .dot-in-progress { background-color: var(--status-in-progress); }
-    .dot-needs-focus { background-color: var(--status-needs-focus); }
-    .dot-at-risk { background-color: var(--status-at-risk); }
-    .dot-completed { background-color: var(--status-completed); }
+    .dot-on-track {
+      background-color: var(--status-on-track);
+    }
+
+    .dot-in-progress {
+      background-color: var(--status-in-progress);
+    }
+
+    .dot-needs-focus {
+      background-color: var(--status-needs-focus);
+    }
+
+    .dot-at-risk {
+      background-color: var(--status-at-risk);
+    }
+
+    .dot-completed {
+      background-color: var(--status-completed);
+    }
 
     /* Columns Flex Board */
     .goals-board {
@@ -627,26 +650,68 @@
     }
 
     /* Column specific styles based on active colors */
-    .col-personal-growth { border-left: 4px solid var(--personal-growth); }
-    .col-personal-growth .column-header { background: var(--personal-growth-bg); color: var(--personal-growth); }
-    
-    .col-health-fitness { border-left: 4px solid var(--health-fitness); }
-    .col-health-fitness .column-header { background: var(--health-fitness-bg); color: var(--health-fitness); }
+    .col-personal-growth {
+      border-left: 4px solid var(--personal-growth);
+    }
 
-    .col-career-skills { border-left: 4px solid var(--career-skills); }
-    .col-career-skills .column-header { background: var(--career-skills-bg); color: var(--career-skills); }
+    .col-personal-growth .column-header {
+      background: var(--personal-growth-bg);
+      color: var(--personal-growth);
+    }
 
-    .col-finance { border-left: 4px solid var(--finance); }
-    .col-finance .column-header { background: var(--finance-bg); color: var(--finance); }
+    .col-health-fitness {
+      border-left: 4px solid var(--health-fitness);
+    }
 
-    .col-relationships { border-left: 4px solid var(--relationships); }
-    .col-relationships .column-header { background: var(--relationships-bg); color: var(--relationships); }
+    .col-health-fitness .column-header {
+      background: var(--health-fitness-bg);
+      color: var(--health-fitness);
+    }
 
-    .col-lifestyle { border-left: 4px solid var(--lifestyle); }
-    .col-lifestyle .column-header { background: var(--lifestyle-bg); color: var(--lifestyle); }
+    .col-career-skills {
+      border-left: 4px solid var(--career-skills);
+    }
 
-    .col-projects { border-left: 4px solid var(--projects); }
-    .col-projects .column-header { background: var(--projects-bg); color: var(--projects); }
+    .col-career-skills .column-header {
+      background: var(--career-skills-bg);
+      color: var(--career-skills);
+    }
+
+    .col-finance {
+      border-left: 4px solid var(--finance);
+    }
+
+    .col-finance .column-header {
+      background: var(--finance-bg);
+      color: var(--finance);
+    }
+
+    .col-relationships {
+      border-left: 4px solid var(--relationships);
+    }
+
+    .col-relationships .column-header {
+      background: var(--relationships-bg);
+      color: var(--relationships);
+    }
+
+    .col-lifestyle {
+      border-left: 4px solid var(--lifestyle);
+    }
+
+    .col-lifestyle .column-header {
+      background: var(--lifestyle-bg);
+      color: var(--lifestyle);
+    }
+
+    .col-projects {
+      border-left: 4px solid var(--projects);
+    }
+
+    .col-projects .column-header {
+      background: var(--projects-bg);
+      color: var(--projects);
+    }
 
     /* Goal Cards in Column */
     .cards-container {
@@ -731,11 +796,30 @@
       letter-spacing: 0.3px;
     }
 
-    .status-badge-on-track { background: rgba(5, 150, 105, 0.1); color: var(--status-on-track); }
-    .status-badge-in-progress { background: rgba(37, 99, 235, 0.1); color: var(--status-in-progress); }
-    .status-badge-needs-focus { background: rgba(234, 88, 12, 0.1); color: var(--status-needs-focus); }
-    .status-badge-at-risk { background: rgba(220, 38, 38, 0.1); color: var(--status-at-risk); }
-    .status-badge-completed { background: rgba(22, 163, 74, 0.1); color: var(--status-completed); }
+    .status-badge-on-track {
+      background: rgba(5, 150, 105, 0.1);
+      color: var(--status-on-track);
+    }
+
+    .status-badge-in-progress {
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--status-in-progress);
+    }
+
+    .status-badge-needs-focus {
+      background: rgba(234, 88, 12, 0.1);
+      color: var(--status-needs-focus);
+    }
+
+    .status-badge-at-risk {
+      background: rgba(220, 38, 38, 0.1);
+      color: var(--status-at-risk);
+    }
+
+    .status-badge-completed {
+      background: rgba(22, 163, 74, 0.1);
+      color: var(--status-completed);
+    }
 
     .goal-progress-text {
       font-size: 0.75rem;
@@ -758,13 +842,33 @@
     }
 
     /* Column-specific card details */
-    .col-personal-growth .goal-progress-bar-inner { background: var(--personal-growth); }
-    .col-health-fitness .goal-progress-bar-inner { background: var(--health-fitness); }
-    .col-career-skills .goal-progress-bar-inner { background: var(--career-skills); }
-    .col-finance .goal-progress-bar-inner { background: var(--finance); }
-    .col-relationships .goal-progress-bar-inner { background: var(--relationships); }
-    .col-lifestyle .goal-progress-bar-inner { background: var(--lifestyle); }
-    .col-projects .goal-progress-bar-inner { background: var(--projects); }
+    .col-personal-growth .goal-progress-bar-inner {
+      background: var(--personal-growth);
+    }
+
+    .col-health-fitness .goal-progress-bar-inner {
+      background: var(--health-fitness);
+    }
+
+    .col-career-skills .goal-progress-bar-inner {
+      background: var(--career-skills);
+    }
+
+    .col-finance .goal-progress-bar-inner {
+      background: var(--finance);
+    }
+
+    .col-relationships .goal-progress-bar-inner {
+      background: var(--relationships);
+    }
+
+    .col-lifestyle .goal-progress-bar-inner {
+      background: var(--lifestyle);
+    }
+
+    .col-projects .goal-progress-bar-inner {
+      background: var(--projects);
+    }
 
     .card-actions {
       position: absolute;
@@ -844,6 +948,8 @@
     .habit-tracker-card {
       display: flex;
       flex-direction: column;
+      max-height: 500px;
+      overflow: hidden;
     }
 
     .widget-header {
@@ -865,6 +971,22 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 0.85rem;
+    }
+
+    .habit-table-wrapper {
+      overflow-x: auto;
+      overflow-y: auto;
+      max-height: 300px;
+    }
+
+    .habit-table-wrapper::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .habit-table-wrapper::-webkit-scrollbar-thumb {
+      background: var(--border-color-dark);
+      border-radius: 3px;
     }
 
     .habit-grid-table th {
@@ -985,7 +1107,16 @@
       flex-direction: column;
       gap: 8px;
       overflow-y: auto;
-      max-height: 200px;
+      max-height: 400px;
+    }
+
+    .priority-list::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .priority-list::-webkit-scrollbar-thumb {
+      background: var(--border-color-dark);
+      border-radius: 3px;
     }
 
     .priority-item {
@@ -1012,9 +1143,20 @@
       margin-left: auto;
     }
 
-    .badge-high { background: rgba(220, 38, 38, 0.1); color: #dc2626; }
-    .badge-medium { background: rgba(245, 158, 11, 0.1); color: #d97706; }
-    .badge-low { background: rgba(59, 130, 246, 0.1); color: #2563eb; }
+    .badge-high {
+      background: rgba(220, 38, 38, 0.1);
+      color: #dc2626;
+    }
+
+    .badge-medium {
+      background: rgba(245, 158, 11, 0.1);
+      color: #d97706;
+    }
+
+    .badge-low {
+      background: rgba(59, 130, 246, 0.1);
+      color: #2563eb;
+    }
 
     /* Widgets Grid - Row 2 */
     .widgets-grid-r2 {
@@ -1318,8 +1460,13 @@
     }
 
     @keyframes pulse {
-      0% { opacity: 0.3; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 0.3;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     /* Modal Overlay Styles */
@@ -1448,16 +1595,29 @@
       animation: slideIn 0.3s forwards, slideOut 0.3s 2.7s forwards;
     }
 
-    .toast.toast-success { border-left-color: #10b981; }
-    .toast.toast-error { border-left-color: #dc2626; }
-    .toast.toast-warning { border-left-color: #f59e0b; }
+    .toast.toast-success {
+      border-left-color: #10b981;
+    }
+
+    .toast.toast-error {
+      border-left-color: #dc2626;
+    }
+
+    .toast.toast-warning {
+      border-left-color: #f59e0b;
+    }
 
     @keyframes slideIn {
-      100% { transform: translateX(0); }
+      100% {
+        transform: translateX(0);
+      }
     }
 
     @keyframes slideOut {
-      100% { transform: translateX(120%); opacity: 0; }
+      100% {
+        transform: translateX(120%);
+        opacity: 0;
+      }
     }
 
     /* Settings instruction block */
@@ -1474,20 +1634,21 @@
     }
   </style>
 </head>
+
 <body data-theme="light">
 
   <div class="app-container">
-    
+
     <!-- Top Header -->
     <header class="header glass-card">
-      
+
       <!-- Brand & Date -->
       <div class="brand-section">
         <h1 class="brand-title">My Personal Goal Tracker 🎯</h1>
         <div class="brand-subtitle">
-          <span>Plan ☀️</span> | 
-          <span>Focus 🎯</span> | 
-          <span>Action ⚡</span> | 
+          <span>Plan ☀️</span> |
+          <span>Focus 🎯</span> |
+          <span>Action ⚡</span> |
           <span>Achieve 🏆</span>
         </div>
         <div class="brand-date-bar">
@@ -1553,9 +1714,18 @@
 
       <!-- Quote Box -->
       <div class="quotes-widget glass-card">
+        <button class="icon-btn" onclick="toggleEditQuote()" id="btn-edit-quote"
+          style="position: absolute; top: 8px; right: 8px;">
+          <i data-lucide="edit-3"></i>
+        </button>
         <i data-lucide="quote" class="quote-left"></i>
-        <div class="quote-text" id="quote-display-text">"Discipline is the bridge between goals and accomplishment."</div>
+        <div class="quote-text" id="quote-display-text">"Discipline is the bridge between goals and accomplishment."
+        </div>
         <div class="quote-author" id="quote-display-author">- Jim Rohn</div>
+        <textarea id="quote-text-edit" class="note-textarea"
+          style="display: none; height: 80px; margin-top: 8px; margin-bottom: 8px;"></textarea>
+        <textarea id="quote-author-edit" class="note-textarea"
+          style="display: none; height: 40px; margin-bottom: 8px; font-size: 0.8rem;"></textarea>
         <i data-lucide="quote" class="quote-right"></i>
       </div>
 
@@ -1587,10 +1757,10 @@
 
     <!-- Main Board Grid -->
     <main class="board-container">
-      
+
       <!-- Sidebar -->
       <div class="sidebar-wrapper">
-        
+
         <!-- My Vision -->
         <div class="glass-card vision-card">
           <div class="vision-header">
@@ -1602,7 +1772,8 @@
           <div class="vision-content" id="vision-text-display">
             To become the best version of myself, live a meaningful life, help others and achieve financial freedom.
           </div>
-          <textarea id="vision-text-edit" class="note-textarea" style="display: none; height: 100px; margin-top: 8px; font-style: italic;"></textarea>
+          <textarea id="vision-text-edit" class="note-textarea"
+            style="display: none; height: 100px; margin-top: 8px; font-style: italic;"></textarea>
         </div>
 
         <!-- Filter Goals -->
@@ -1685,14 +1856,14 @@
 
     <!-- Widgets Row 1: Habit Tracker, Weekly Progress, Daily Priorities -->
     <section class="widgets-grid-r1">
-      
+
       <!-- Habit Tracker -->
       <div class="glass-card habit-tracker-card">
         <div class="widget-header">
           <h3 class="widget-title"><i data-lucide="check-square" style="color: #10b981;"></i> Daily Habit Tracker</h3>
           <button class="icon-btn" onclick="openHabitModal()"><i data-lucide="plus"></i></button>
         </div>
-        <div style="overflow-x: auto; flex-grow: 1;">
+        <div class="habit-table-wrapper">
           <table class="habit-grid-table">
             <thead>
               <tr>
@@ -1715,7 +1886,8 @@
         <div class="habit-footer">
           <div>This Week Score: <span class="habit-score-badge" id="habit-week-score">86%</span></div>
           <div style="display: flex; align-items: center; gap: 4px; color: var(--status-needs-focus);">
-            <i data-lucide="flame" style="fill: var(--status-needs-focus);"></i> Longest Streak: <span id="habit-longest-streak">12 Days</span>
+            <i data-lucide="flame" style="fill: var(--status-needs-focus);"></i> Longest Streak: <span
+              id="habit-longest-streak">12 Days</span>
           </div>
         </div>
       </div>
@@ -1723,7 +1895,8 @@
       <!-- Weekly Progress overview (Chart) -->
       <div class="glass-card chart-card">
         <div class="widget-header">
-          <h3 class="widget-title"><i data-lucide="line-chart" style="color: var(--accent-color);"></i> Weekly Progress Overview</h3>
+          <h3 class="widget-title"><i data-lucide="line-chart" style="color: var(--accent-color);"></i> Weekly Progress
+            Overview</h3>
         </div>
         <div class="chart-container">
           <canvas id="weeklyProgressChart"></canvas>
@@ -1771,24 +1944,28 @@
 
     <!-- Widgets Row 2: Notes & Reflections, Resources & Links -->
     <section class="widgets-grid-r2">
-      
+
       <!-- Notes & Reflections -->
       <div class="glass-card">
         <div class="widget-header">
-          <h3 class="widget-title"><i data-lucide="pen-tool" style="color: var(--accent-color);"></i> Notes & Reflections</h3>
+          <h3 class="widget-title"><i data-lucide="pen-tool" style="color: var(--accent-color);"></i> Notes &
+            Reflections</h3>
         </div>
         <div class="notes-grid">
           <div class="note-box">
             <h4>What went well today?</h4>
-            <textarea id="note-went-well" class="note-textarea" placeholder="List items..." onchange="saveNotes()"></textarea>
+            <textarea id="note-went-well" class="note-textarea" placeholder="List items..."
+              onchange="saveNotes()"></textarea>
           </div>
           <div class="note-box">
             <h4>What can be improved?</h4>
-            <textarea id="note-to-improve" class="note-textarea" placeholder="List items..." onchange="saveNotes()"></textarea>
+            <textarea id="note-to-improve" class="note-textarea" placeholder="List items..."
+              onchange="saveNotes()"></textarea>
           </div>
           <div class="note-box">
             <h4>Tomorrow I will...</h4>
-            <textarea id="note-tomorrow" class="note-textarea" placeholder="List items..." onchange="saveNotes()"></textarea>
+            <textarea id="note-tomorrow" class="note-textarea" placeholder="List items..."
+              onchange="saveNotes()"></textarea>
           </div>
         </div>
       </div>
@@ -1808,7 +1985,7 @@
 
     <!-- Widgets Row 3: Milestones, Monthly Progress, Reward System, Accountability, Quick Actions -->
     <section class="widgets-grid-r3">
-      
+
       <!-- Milestones -->
       <div class="glass-card">
         <div class="widget-header">
@@ -1822,8 +1999,9 @@
 
       <!-- Monthly Progress (Circular Gauge) -->
       <div class="glass-card monthly-progress-card">
-        <h3 class="widget-title" style="margin-bottom: 12px;"><i data-lucide="calendar-days" style="color: var(--accent-color);"></i> Monthly Progress</h3>
-        
+        <h3 class="widget-title" style="margin-bottom: 12px;"><i data-lucide="calendar-days"
+            style="color: var(--accent-color);"></i> Monthly Progress</h3>
+
         <div class="gauge-wrapper">
           <svg class="gauge-svg">
             <defs>
@@ -1839,7 +2017,8 @@
         </div>
 
         <div class="monthly-stats">
-          <div style="font-weight: 600; color: var(--text-secondary);" id="monthly-goals-updated">Goals Updated: 48</div>
+          <div style="font-weight: 600; color: var(--text-secondary);" id="monthly-goals-updated">Goals Updated: 48
+          </div>
           <div style="color: var(--text-tertiary);" id="monthly-tasks-completed">Tasks Completed: 142</div>
         </div>
       </div>
@@ -1858,18 +2037,22 @@
       <!-- Accountability & Support -->
       <div class="glass-card">
         <div class="widget-header">
-          <h3 class="widget-title"><i data-lucide="shield-check" style="color: var(--personal-growth);"></i> Accountability</h3>
+          <h3 class="widget-title"><i data-lucide="shield-check" style="color: var(--personal-growth);"></i>
+            Accountability</h3>
         </div>
         <div class="accountability-content">
           <div class="info-row">
             <div>Partner</div>
-            <div id="accountability-partner" style="font-weight: 600; color: var(--text-secondary);">No partner added</div>
+            <div id="accountability-partner" style="font-weight: 600; color: var(--text-secondary);">No partner added
+            </div>
           </div>
           <div class="info-row">
             <div>Reminders</div>
-            <div id="accountability-reminders" style="font-weight: 600; color: var(--text-secondary);">Daily at 8:00 AM</div>
+            <div id="accountability-reminders" style="font-weight: 600; color: var(--text-secondary);">Daily at 8:00 AM
+            </div>
           </div>
-          <button class="btn btn-secondary" onclick="openAccountabilityModal()" style="width: 100%; justify-content: center; padding: 6px;">
+          <button class="btn btn-secondary" onclick="openAccountabilityModal()"
+            style="width: 100%; justify-content: center; padding: 6px;">
             <i data-lucide="settings"></i> Manage Support
           </button>
         </div>
@@ -1881,7 +2064,8 @@
         <div class="actions-grid">
           <button class="action-btn" onclick="openGoalModal()"><i data-lucide="plus-circle"></i> Add Goal</button>
           <button class="action-btn" onclick="openPriorityModal()"><i data-lucide="list-plus"></i> Add Priority</button>
-          <button class="action-btn" onclick="loadSampleDataBtn()"><i data-lucide="refresh-cw"></i> Load Demo Data</button>
+          <button class="action-btn" onclick="loadSampleDataBtn()"><i data-lucide="refresh-cw"></i> Load Demo
+            Data</button>
           <button class="action-btn" onclick="openSettingsModal()"><i data-lucide="settings"></i> Sync Settings</button>
         </div>
       </div>
@@ -1890,9 +2074,11 @@
 
     <!-- Footer Quotes Ticker -->
     <footer class="footer-bar glass-card">
-      <div id="footer-ticker-text">"Success is the sum of small efforts, repeated day in and day out." — Robert Collier</div>
+      <div id="footer-ticker-text">"Success is the sum of small efforts, repeated day in and day out." — Robert Collier
+      </div>
       <div style="font-weight: 700; color: var(--accent-color); display: flex; align-items: center; gap: 6px;">
-        <span>You've Got This!</span> <i data-lucide="thumbs-up" style="width: 16px; height: 16px; fill: var(--accent-color);"></i>
+        <span>You've Got This!</span> <i data-lucide="thumbs-up"
+          style="width: 16px; height: 16px; fill: var(--accent-color);"></i>
       </div>
     </footer>
 
@@ -1913,6 +2099,10 @@
     // Core Application State
     let state = {
       vision: "To become the best version of myself, live a meaningful life, help others and achieve financial freedom.",
+      quote: {
+        text: "\"Discipline is the bridge between goals and accomplishment.\"",
+        author: "- Jim Rohn"
+      },
       goals: [],
       habits: [],
       priorities: [],
@@ -1951,7 +2141,7 @@
       document.body.setAttribute('data-theme', savedTheme);
       // We can also let user toggle. Let's add a floating theme switch inside the header soon, or manage via settings.
     }
-    
+
     // Toggle theme helper
     function toggleTheme() {
       const current = document.body.getAttribute('data-theme');
@@ -1971,7 +2161,7 @@
     window.addEventListener('DOMContentLoaded', () => {
       initTheme();
       loadFromLocalStorage();
-      
+
       // Initialize Lucide Icons
       lucide.createIcons();
 
@@ -1989,7 +2179,7 @@
 
       // Render Everything
       renderDashboard();
-      
+
       // Setup weekly progress chart
       initWeeklyChart();
 
@@ -2004,14 +2194,14 @@
       const container = document.getElementById('toast-container');
       const toast = document.createElement('div');
       toast.className = `toast toast-${type}`;
-      
+
       let icon = 'check-circle';
       if (type === 'error') icon = 'x-circle';
       if (type === 'warning') icon = 'alert-triangle';
-      
+
       toast.innerHTML = `<i data-lucide="${icon}"></i> <span>${message}</span>`;
       container.appendChild(toast);
-      
+
       lucide.createIcons({ attrs: { class: 'toast-icon' } });
 
       // Auto remove from DOM
@@ -2067,6 +2257,10 @@
           if (!state.settings) {
             state.settings = { supabaseUrl: "", supabaseKey: "", dashboardId: "", password: "" };
           }
+          // Set default quote if old format
+          if (!state.quote) {
+            state.quote = { text: "\"Discipline is the bridge between goals and accomplishment.\"", author: "- Jim Rohn" };
+          }
         } catch (e) {
           console.error("Error reading from localstorage", e);
         }
@@ -2074,6 +2268,10 @@
         // First time load: Start with clean empty state
         state = {
           vision: "Click the edit icon to write your personal vision statement here...",
+          quote: {
+            text: "\"Discipline is the bridge between goals and accomplishment.\"",
+            author: "- Jim Rohn"
+          },
           goals: [],
           habits: [],
           priorities: [],
@@ -2128,7 +2326,7 @@
       const salt = window.crypto.getRandomValues(new Uint8Array(16));
       const iv = window.crypto.getRandomValues(new Uint8Array(12));
       const key = await deriveKey(password, salt);
-      
+
       const ciphertext = await window.crypto.subtle.encrypt(
         { name: "AES-GCM", iv: iv },
         key,
@@ -2149,14 +2347,14 @@
         const salt = new Uint8Array(atob(encryptedObj.salt).split("").map(c => c.charCodeAt(0)));
         const iv = new Uint8Array(atob(encryptedObj.iv).split("").map(c => c.charCodeAt(0)));
         const ciphertext = new Uint8Array(atob(encryptedObj.ciphertext).split("").map(c => c.charCodeAt(0)));
-        
+
         const key = await deriveKey(password, salt);
         const decrypted = await window.crypto.subtle.decrypt(
           { name: "AES-GCM", iv: iv },
           key,
           ciphertext
         );
-        
+
         const dec = new TextDecoder();
         return dec.decode(decrypted);
       } catch (err) {
@@ -2204,7 +2402,7 @@
       syncTimeout = setTimeout(async () => {
         try {
           let payloadData = JSON.stringify(state);
-          
+
           // Encrypt data if password is set
           if (state.settings.password) {
             const encObj = await encryptData(payloadData, state.settings.password);
@@ -2213,10 +2411,10 @@
 
           const { error } = await supabaseClient
             .from('dashboard_data')
-            .upsert({ 
-              id: state.settings.dashboardId, 
-              data: JSON.parse(payloadData), 
-              updated_at: new Date().toISOString() 
+            .upsert({
+              id: state.settings.dashboardId,
+              data: JSON.parse(payloadData),
+              updated_at: new Date().toISOString()
             });
 
           if (error) throw error;
@@ -2285,10 +2483,10 @@
         // Cache the credentials
         state.settings = { supabaseUrl: url, supabaseKey: key, dashboardId: id, password: password };
         supabaseClient = tempClient;
-        
+
         // Save to browser
         localStorage.setItem('personal-goal-tracker-data', JSON.stringify(state));
-        
+
         showToast("Dashboard successfully synced and updated!", "success");
         renderDashboard();
         initWeeklyChart();
@@ -2305,6 +2503,8 @@
       // 1. Update text elements
       document.getElementById('vision-text-display').textContent = state.vision;
       document.getElementById('vision-text-edit').value = state.vision;
+      document.getElementById('quote-display-text').textContent = state.quote.text;
+      document.getElementById('quote-display-author').textContent = state.quote.author;
 
       // 2. Refresh lists/sections
       renderGoalsBoard();
@@ -2315,7 +2515,7 @@
       renderMilestones();
       renderRewards();
       renderNotes();
-      
+
       // 3. Update accountability display
       document.getElementById('accountability-partner').textContent = state.accountability.partner;
       document.getElementById('accountability-reminders').textContent = state.accountability.reminders;
@@ -2329,7 +2529,7 @@
       // Goals completed / total
       const totalGoalsCount = state.goals.length;
       const completedGoals = state.goals.filter(g => g.status === 'Completed' || (g.current >= g.target && g.target > 0)).length;
-      
+
       document.getElementById('stat-goals-achieved').textContent = completedGoals;
       document.getElementById('stat-goals-achieved-sub').textContent = `of ${totalGoalsCount}`;
 
@@ -2352,11 +2552,11 @@
           totalPercentageSum += goalPercentage;
         });
       }
-      
+
       const overallProgress = totalGoalsCount > 0 ? Math.round(totalPercentageSum / totalGoalsCount) : 0;
       document.getElementById('stat-overall-progress').textContent = `${overallProgress}%`;
       document.getElementById('stat-overall-progress-bar').style.width = `${overallProgress}%`;
-      
+
       const descEl = document.getElementById('stat-overall-progress-desc');
       if (overallProgress >= 80) descEl.textContent = "Incredible work! 🏆";
       else if (overallProgress >= 60) descEl.textContent = "You're doing great! 💪";
@@ -2392,7 +2592,7 @@
 
     // Filter Logic
     let activeTab = 'all';
-    
+
     // Tab event listeners
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -2427,8 +2627,8 @@
         "Projects"
       ];
 
-      const activeCategories = (activeTab === 'all') 
-        ? categories 
+      const activeCategories = (activeTab === 'all')
+        ? categories
         : [activeTab];
 
       activeCategories.forEach(cat => {
@@ -2539,7 +2739,7 @@
       if (isChecked) {
         goal.loggedToday = true;
         goal.current = parseFloat((Math.min(goal.target, goal.current + step)).toFixed(2));
-        
+
         // If it reached target, mark as completed
         if (goal.current >= goal.target) {
           goal.status = 'Completed';
@@ -2559,7 +2759,7 @@
       } else {
         goal.loggedToday = false;
         goal.current = parseFloat((Math.max(0, goal.current - step)).toFixed(2));
-        
+
         // If it was completed but now dropped below target
         if (goal.status === 'Completed' && goal.current < goal.target) {
           goal.status = 'In Progress';
@@ -2724,7 +2924,7 @@
         editEl.style.display = 'none';
         btn.innerHTML = '<i data-lucide="edit-3"></i>';
         isEditingVision = false;
-        
+
         saveToLocalStorage();
         renderDashboard();
         showToast("Vision statement updated!", "success");
@@ -2732,10 +2932,49 @@
       lucide.createIcons();
     }
 
+    // Header: Edit Quote content
+    let isEditingQuote = false;
+    function toggleEditQuote() {
+      const textDisplayEl = document.getElementById('quote-display-text');
+      const authorDisplayEl = document.getElementById('quote-display-author');
+      const textEditEl = document.getElementById('quote-text-edit');
+      const authorEditEl = document.getElementById('quote-author-edit');
+      const btn = document.getElementById('btn-edit-quote');
+
+      if (!isEditingQuote) {
+        // Switch to edit mode
+        textEditEl.value = state.quote.text.replace(/^"|"$/g, '');
+        authorEditEl.value = state.quote.author.replace(/^- /, '');
+        textDisplayEl.style.display = 'none';
+        authorDisplayEl.style.display = 'none';
+        textEditEl.style.display = 'block';
+        authorEditEl.style.display = 'block';
+        textEditEl.focus();
+        btn.innerHTML = '<i data-lucide="check"></i>';
+        isEditingQuote = true;
+      } else {
+        // Save and switch back
+        state.quote.text = '"' + textEditEl.value + '"';
+        state.quote.author = '- ' + authorEditEl.value;
+        textDisplayEl.textContent = state.quote.text;
+        authorDisplayEl.textContent = state.quote.author;
+        textDisplayEl.style.display = 'block';
+        authorDisplayEl.style.display = 'block';
+        textEditEl.style.display = 'none';
+        authorEditEl.style.display = 'none';
+        btn.innerHTML = '<i data-lucide="edit-3"></i>';
+        isEditingQuote = false;
+
+        saveToLocalStorage();
+        showToast("Quote updated!", "success");
+      }
+      lucide.createIcons();
+    }
+
     // Render Overview Counts
     function renderOverviewStats() {
       const counts = { 'On Track': 0, 'In Progress': 0, 'Needs Focus': 0, 'At Risk': 0, 'Completed': 0 };
-      
+
       state.goals.forEach(g => {
         if (counts.hasOwnProperty(g.status)) {
           counts[g.status]++;
@@ -2788,7 +3027,7 @@
       if (!habit) return;
 
       habit.history[day] = !habit.history[day];
-      
+
       saveToLocalStorage();
       renderDashboard();
       updateWeeklyChartData();
@@ -2828,7 +3067,7 @@
       event.preventDefault();
       const name = document.getElementById('form-habit-name').value;
       const id = 'h-' + Date.now();
-      
+
       state.habits.push({
         id,
         name,
@@ -2848,7 +3087,7 @@
     function initWeeklyChart() {
       const ctx = document.getElementById('weeklyProgressChart').getContext('2d');
       const isDark = document.body.getAttribute('data-theme') === 'dark';
-      
+
       // Calculate daily counts for habit completion for this week's data points
       const dataPoints = getWeeklyDataPoints();
 
@@ -2884,7 +3123,7 @@
               },
               ticks: {
                 color: isDark ? '#9ca3af' : '#6b7280',
-                callback: function(value) { return value + "%"; }
+                callback: function (value) { return value + "%"; }
               }
             },
             x: {
@@ -2919,7 +3158,7 @@
       if (!weeklyChart) return;
       const dataPoints = getWeeklyDataPoints();
       weeklyChart.data.datasets[0].data = dataPoints;
-      
+
       // Update best day statistic
       const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
       let maxIdx = 0;
@@ -2969,7 +3208,7 @@
     function togglePriority(id) {
       const priority = state.priorities.find(p => p.id === id);
       if (!priority) return;
-      
+
       priority.completed = !priority.completed;
       if (priority.completed) {
         confetti({
@@ -3024,7 +3263,7 @@
       event.preventDefault();
       const title = document.getElementById('form-priority-title').value;
       const priority = document.getElementById('form-priority-level').value;
-      
+
       state.priorities.push({
         id: 'p-' + Date.now(),
         title,
@@ -3171,7 +3410,7 @@
 
       state.milestones.forEach(m => {
         const pct = m.target > 0 ? Math.min(100, Math.round((m.current / m.target) * 100)) : 0;
-        
+
         const itemHtml = `
           <div class="milestone-item">
             <div class="milestone-label">
@@ -3375,7 +3614,7 @@
     // ----------------------------------------------------
     function openSettingsModal() {
       const settings = state.settings || { supabaseUrl: "", supabaseKey: "", dashboardId: "", password: "" };
-      
+
       const modalHtml = `
         <div class="modal-header">
           <h3 class="modal-title"><i data-lucide="database" style="color: var(--accent-color);"></i> Cloud Sync (Supabase)</h3>
@@ -3470,7 +3709,11 @@ create policy "Allow public access" on dashboard_data for all using (true) with 
 
     function loadSampleData() {
       state.vision = "To become the best version of myself, live a meaningful life, help others and achieve financial freedom.";
-      
+      state.quote = {
+        text: "\"Discipline is the bridge between goals and accomplishment.\"",
+        author: "- Jim Rohn"
+      };
+
       // Load 42 sample goals matching mockup
       state.goals = [
         // Personal Growth
@@ -3480,7 +3723,7 @@ create policy "Allow public access" on dashboard_data for all using (true) with 
         { id: "pg-4", category: "Personal Growth", title: "Meditate 10 mins daily", status: "In Progress", type: "numeric", current: 60, target: 100 },
         { id: "pg-5", category: "Personal Growth", title: "Attend 2 workshops", status: "In Progress", type: "numeric", current: 1, target: 2 },
         { id: "pg-6", category: "Personal Growth", title: "Build self confidence", status: "Needs Focus", type: "percentage", current: 20, target: 100 },
-        
+
         // Health & Fitness
         { id: "hf-1", category: "Health & Fitness", title: "Workout 4 days/week", status: "On Track", type: "numeric", current: 24, target: 32, loggedToday: true },
         { id: "hf-2", category: "Health & Fitness", title: "Drink 3L water daily", status: "On Track", type: "numeric", current: 85, target: 100, loggedToday: true },
@@ -3590,4 +3833,5 @@ create policy "Allow public access" on dashboard_data for all using (true) with 
     }
   </script>
 </body>
+
 </html>
